@@ -2,6 +2,7 @@ const { strict } = require("assert");
 const {Schema, model} = require("mongoose");
 const { type } = require("os");
 
+//Modelo del usuario: name, surname, nick, email, role, image, created_at
 const UserShema = Schema({
     name: {
         type: String,
@@ -15,6 +16,10 @@ const UserShema = Schema({
         require: true
     },
     email: {
+        type: String,
+        require: true
+    },
+    password:{
         type: String,
         require: true
     },
